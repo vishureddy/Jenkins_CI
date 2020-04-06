@@ -1,9 +1,9 @@
 pipeline {
      agent any
-     stages {
-          tools {
+     tools {
                go 'default-go'
           }    
+     stages {
           stage("SCM Checkout") {
                steps {
                     git 'https://github.com/vishureddy/Jenkins_CI.git'
