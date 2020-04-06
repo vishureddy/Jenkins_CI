@@ -12,7 +12,7 @@ pipeline {
           stage("Pre-Test") {
                steps {
                     sh "go get -u golang.org/x/lint/golint"
-                    sh "github.com/logrusorgru/aurora"
+                    sh "go get -u github.com/logrusorgru/aurora"
                }
           }
           stage("Testing") {
