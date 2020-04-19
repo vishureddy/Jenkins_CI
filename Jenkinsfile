@@ -18,7 +18,6 @@ pipeline {
           stage("Testing") {
                steps {
                      sh "go fmt"
-                     sh "golint"
                      sh "go vet"
                      sh "go run -race ."
                      sh "go test"
