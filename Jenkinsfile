@@ -23,9 +23,11 @@ pipeline {
                      sh "go test"
                }
           }
-          stage("Build") {
+          stage("Build && Sonarqube analysis") {
                steps {
+                    withSonarQubeEnv('SonarQube Server') {
                     sh "go build"
+               }
                }
           }
      }
